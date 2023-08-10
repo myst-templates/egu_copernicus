@@ -60,7 +60,10 @@ addtopdfcreator={Written in Curvenote}
 [# endfor #]
 
 [# for author in doc.authors #]
-\affil[[-author.index-]]{[-author.affiliations|join(", ", "value")-]}
+\affil[[-author.index-]]{
+[#- for affiliation in author.affiliations #]
+[-affiliation.value.name-][# if not loop.last #], [# endif #]
+[# endfor #]}
 [# endfor #]
 
 %% The [] brackets identify the author with the corresponding affiliation. 1, 2, 3, etc. should be inserted.
