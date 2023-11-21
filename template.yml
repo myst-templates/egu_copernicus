@@ -149,6 +149,7 @@ files:
   - template.tex
   - copernicus.bst
   - copernicus.cls
+  - copernicus.cfg
   - pdfscreen.sty
   - pdfscreencop.sty
 packages:
